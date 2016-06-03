@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+	<!-- Basic HTML elements for Snail Bait. Elements for things such as sounds, credits, toasts, developer backdoor, etc. are omitted for brevity. -->
+
+<html>
+
+	<!-- Head -->
+	<head>
+		<title>Snail Bait</title>
+		<link rel='stylesheet' href='snailbait.css'>
+	</head>
+
+	<!-- Body -->
+	<body>
+
+		<!-- Arena -->
+		<div id='snailbait-arena'>
+
+			<!-- Score -->
+			<div id='snailbait-score'>0</div>
+			<div id='snailbait-fps'>0</div>
+
+			<!-- Snail Bait Toasts -->
+			<div id='snailbait-toast'></div>
+
+			<!-- Snail Bait Toasts -->
+			<div id='snailbait-loading'>
+				<div id='snailbait-loading-title'>Loading...</div>
+				<img id='snailbait-loading-animated-gif'/>
+			</div>
+
+			<!-- Lives indicator -->
+<!-- 			<div id='snailbait-lives'>
+				<img id='snailbait-life-icon-left' src='images/runner-small.png' />
+				<img id='snailbait-life-icon-middle' src='images/runner-small.png' />
+				<img id='snailbait-life-icon-right' src='images/runner-small.png' />
+			</div> -->
+
+
+			<!-- The game canvas -->
+			<canvas id='snailbait-game-canvas' width='800' height='400'>Your browser does not support HTML5 canvas</canvas>
+
+			<!-- BOTTOM CHROME -->
+			<!-- Sound and music -->
+			<div id='snailbait-sound-and-music'>
+				<div id='snailbait-sound-checkbox-div' class='snailbait-checkbox-div'>
+					Sound <input id='snailbait-sound-checkbox' type='checkbox' checked/>
+				</div>
+				<div class='snailbait-checkbox-div'>
+					Music <input id='snailbait-music-checkbox' type='checkbox' checked/>
+				</div>
+			</div>
+
+			<!-- Instructions -->
+			<div id='snailbait-instructions'>
+				<div class='snailbait-keys'>&larr; / d<div class='snailbait-explaination'>Move left</div></div>
+				<div class='snailbait-keys'>&rarr; / k<div class='snailbait-explaination'>Move right</div></div>
+				<div class='snailbait-keys'>j<div class='snailbait-explaination'>Jump</div></div>
+				<div class='snailbait-keys'>p<div class='snailbait-explaination'>Pause</div></div>
+			</div>
+			<!-- Copyright -->
+			<div id='snailbait-copyright'> &copy; 2012 David Geary </div>
+
+			<!-- Mobile Instructions -->
+			<div id='snailbait-mobile-instructions'>
+				<div class='snailbait-keys'>
+					Left
+					<div class='snailbait-explaination'>Run left or jump</div>
+				</div>
+				<div class='snailbait-keys'>
+					Right
+					<div class='snailbait-explaination'>Run right or jump</div>
+				</div>
+			</div>
+
+
+		</div>
+
+		<!-- Javascript -->
+
+		<!-- Other script tags for the game's other JS files are omitted for brevity. The final version of the game puts all the game's JS into a single file. See Chapter 19 for more details about how Snail Bait is deployed. -->
+
+		<script src='js/requestNextAnimationFrame.js'></script>
+		<script src='js/sprites.js'></script>
+		<script src='js/behaviors/cycle.js'></script>
+		<script src='snailbait.js'></script>
+
+
+	</body>
+
+</html>

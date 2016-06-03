@@ -1,0 +1,279 @@
+body {
+   /* Background from CSS3 Patterns Gallery by Anna Kassner */
+
+   background-color: #6d6aff;
+
+   background-image:
+      -webkit-repeating-linear-gradient(120deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
+      -webkit-repeating-linear-gradient(60deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
+      -webkit-linear-gradient(60deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1)),
+      -webkit-linear-gradient(120deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1));
+
+   background-image:
+      repeating-linear-gradient(120deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
+      repeating-linear-gradient(60deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
+      linear-gradient(60deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1)),
+      linear-gradient(120deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1));
+
+   background-size: 70px 120px;
+}
+
+#snailbait-lives {
+	position: absolute;
+	margin-top:20px;
+	margin-left:5px;
+
+	-webkit-transition: opacity 5s;
+	-moz-transition: opacity 5s;
+	-o-transition: opacity 5s;
+	-transition: opacity 5s;
+
+	display: none;
+	opacity: 0;
+}
+
+
+#snailbait-score {
+	font: 46px fantasy;
+	text-align: center;
+	color: yellow;
+	text-shadow: 2px 2px 4px rgba(0, 0, 80, 1.0);
+
+	-webkit-transition: opacity 5s;
+	-moz-transition: opacity 5s;
+	-o-transition: opacity 5s;
+	-transition: opacity 5s;
+
+	display: none;
+	opacity: 0;
+}
+
+
+#snailbait-game-canvas {
+	border: 1px solid blue;
+	width: 100%;
+
+	-webkit-transition: opacity 5s;
+	-moz-transition: opacity 5s;
+	-o-transition: opacity 5s;
+	-transition: opacity 5s;
+
+	display: none;
+	opacity: 0;
+}
+
+
+#snailbait-arena {
+	margin: 0 auto;
+	width: 802px;
+	height: 520px;
+}
+
+#snailbait-fps {
+   position: absolute;
+   margin-top: -2em;
+   z-index: 1;
+   color: yellow;
+   text-shadow: 1px 1px 1px rgb(0,0,80);
+   font: bold 20px fantasy;
+
+   -webkit-transition: opacity 5s;
+   -moz-transition: opacity 5s;
+   -o-transition: opacity 5s;
+   transition: opacity 5s;
+
+   opacity: 0;
+   display: none;
+   z-index: 1;
+}
+
+#snailbait-sound-and-music {
+	position: absolute;
+	margin-left: 5px;
+	margin-top: 9px;
+	padding: 5px 2px;
+	color: yellow;
+	font-size: 0.9em;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.20);
+	background: rgba(0,0,0,0.1);
+	border-radius: 5px;
+	border: thin solid rgba(0,0,0,0.20);
+
+	-webkit-transition: opacity 5s;
+	-moz-transition: opacity 5s;
+	-o-transition: opacity 5s;
+	-transition: opacity 5s;
+
+	display: none;
+	opacity: 0;
+}
+
+.snailbait-explanation {
+	color: yellow;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+	margin-top: 5px;
+	padding-right: 5px;
+	padding-left: 5px;
+	padding-bottom: 2px;
+
+	display: inline;
+}
+
+.snailbait-keys {
+	color: orange;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+	background: rgba(0,0,0,0.1);
+	border: thin solid rgba(0,0,0,0.2);
+	border-radius: 5px;
+	margin-left: 10px;
+	padding-right: 5px;
+	padding-left: 5px;
+	padding-bottom: 5px;
+	text-align: center;
+
+	display: inline-block;
+}
+
+#snailbait-instructions {
+	margin-left: 155px;
+	padding-left: 5px;
+	padding-top: 10px;
+	height: 2em;
+
+	color: yellow;
+	font-size: 0.95em;
+
+	-webkit-transition: opacity 5s;
+	-moz-transition: opacity 5s;
+	-o-transition: opacity 5s;
+	-transition: opacity 5s;
+
+	display: none;
+	opacity: 0;
+}
+
+#snailbait-copyright {
+	float: right;
+	margin-right: 2px;
+	margin-top: -2.3em;
+	padding: 2px;
+	color: blue;
+	text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+	font-size: 0.85em;
+
+	-webkit-transition: opacity 5s;
+	-moz-transition: opacity 5s;
+	-o-transition: opacity 5s;
+	-transition: opacity 5s;
+
+	display: none;
+	opacity: 0;
+}
+
+#snailbait-mobile-instructions {
+	display:none;
+	opacity:0;
+}
+
+#snailbait-toast {
+	position: absolute;
+	margin-left: 100px;
+	margin-top:20px;
+	width: 600px;
+	font: 40px fantasy;
+	text-align: center;
+	color: #ff6;
+	text-shadow: 2px 2px 4px rgb(0,0,0);
+
+	-webkit-transition: opacity 0.5s;
+	-moz-transition: opacity 0.5s;
+	-o-transition: opacity 0.5s;
+	transition: opacity 0.5s;
+
+	opacity: 0;
+	z-index: 1;
+	display: none;
+}
+
+/* Loading Screen */
+#snailbait-loading {
+	position: absolute;
+	margin-top: 80px;
+	width: 790px;
+	font: 55px fantasy;
+	text-align: center;
+
+	-webkit-transition: opacity 2.0s;
+	-moz-transition: opacity 2.0s;
+	-o-transition: opacity 2.0s;
+	transition: opacity 2.0s;
+}
+
+#snailbait-loading-title {
+	padding-left: 40px;
+	padding-bottom: 30px;
+	color: #ff6;
+	text-shadow: 2px 2px 4px rgb(0,0,0);
+
+	-webkit-transition: opacity 2.0s;
+	-moz-transition: opacity 2.0s;
+	-o-transition: opacity 2.0s;
+	transition: opacity 2.0s;
+
+	opacity: 0;
+	display: none;
+}
+
+#snailbait-loading-animated-gif {
+	margin: 0 auto;
+	border: thin solid rgba(0,0,255,0.7);
+	border-radius: 60px 60px 60px;
+	padding: 40px;
+	margin-top: 10px;
+
+	/* Radial gardient from www.colorzilla.com/gradient-editor */
+	background: -moz-radial-gradient(center, ellipse cover, #f2f6f8 0%,
+							#d8e1e7 50%, #b5c6d0 51%, #e0eff9 100%);
+
+	background: -webkit-gradient(radial, center center, 0px,
+							center center, 100%,
+							color-stop(0%, #f2f6f8),
+							color-stop(50%, #d8e1e7),
+							color-stop(51%, #b5c6d0),
+							color-stop(100%, #e0eff9));
+
+	background: -webkit-radial-gradient(center, ellipse cover,
+							#f2f6f8 0%,
+							#d8e1e7 50%,
+							#b5c6d0 51%,
+							#e0eff9 100%);
+
+	background: -o-radial-gradient(center, ellipse cover,
+							#f2f6f8 0%,
+							#d8e1e9 50%,
+							#b5c6d0 51%,
+							#e0eff9 100%);
+
+	background: -ms-radial-gradient(center, ellipse cover,
+							#f2f6f8 0%,
+							#d8e1e9 50%,
+							#b5c6d0 51%,
+							#e0eff9 100%);
+
+	background: radial-gradient(ellipse at center,
+							#f2f6f8 0%,
+							#d8e1e9 50%,
+							#b5c6d0 51%,
+							#e0eff9 100%);
+
+	filter: progid:DXImageTransform.Microsoft.gradient(
+					startColorstr='#f2f6f8', endColorstr='#e0eff9', GradientType=1);
+
+	-webkit-transition: opacity 2.0s;
+	-moz-transition: opacity 2.0s;
+	-o-transition: opacity 2.0s;
+	transition: opacity 2.0s;
+
+	opacity: 0;
+	display: none;
+}
