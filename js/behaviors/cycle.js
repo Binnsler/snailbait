@@ -28,7 +28,7 @@ CycleBehavior.prototype = {
 
     else if (this.interval && sprite.artist.cellIndex === 0){
       if(now - this.lastAdvance > this.interval){
-        spirte.artist.advance();
+        sprite.artist.advance();
         this.lastAdvance = now;
       }
     }
